@@ -18,8 +18,8 @@ bool testTriangleContainment(vector<int> coords){
     double checkTriangle1 = abs((origin[0] * (coords[3] - coords[5]) + coords[2] * (coords[5] - origin[1]) + coords[4] * (origin[1] - coords[3]))) / 2.0;
     double checkTriangle2 = abs((coords[0] * (origin[1] - coords[5]) + origin[0] * (coords[5] - coords[1]) + coords[4] * (coords[1] - origin[1]))) / 2.0;
     double checkTriangle3 = abs((coords[0] * (coords[3] - origin[1]) + coords[2] * (origin[1] - coords[1]) + origin[0] * (coords[1] - coords[3]))) / 2.0;
-    if (checkTriangle1 + checkTriangle2 + checkTriangle3 == triangleArea){
-        cout << "Found a triangle containing the origin!" << '\n';
+    if (checkTriangle1 + checkTriangle2 + checkTriangle3 == triangleArea){ // if the areas of the three triangles formed by the vertexes and  
+        cout << "Found a triangle containing the origin!" << '\n';         // origin add up to the actual triangle's area, it contains the origin.
         return true;
     }
     else
